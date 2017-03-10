@@ -92,16 +92,16 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "Mr_WangGang",
+        href: "http://blog.csdn.net/mr_wanggang"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "简书·wan7451_",
+        href: "http://www.jianshu.com/users/1f69adf1da84/timeline"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "React Developer",
+        href: "http://reactnative.cn/"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "Android Developer",
+        href: "https://developer.android.google.cn/index.html"
     }
 ]
