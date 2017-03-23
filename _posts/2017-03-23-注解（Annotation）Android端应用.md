@@ -1,6 +1,6 @@
-# ---
+---
 layout:     post
-title:      注解（Annotation）Android端的简单应用
+title:      注解（Annotation）自定义注解入门
 subtitle:   注解系列
 date:       2017-03-24
 author:     wan7451
@@ -8,14 +8,14 @@ header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
     - Annotation
-    - Android
+    - Java
 ---
 # 注解（Annotation）Android端的简单应用
 
 在Android上，目前有大量的开源框架有使用了注解，辟如 Retrofit、Dagger2、ButterKnife、EventBus、RxCache、GreenDao等等
 接下来就简但了解下 ButterKnife 是如何进行 findViewById 的。
 
-#### 1) 声明注解 
+#### 1) 声明注解
 
 ```
 @Target(ElementType.FIELD)
@@ -41,12 +41,12 @@ if (viewInject != null) {
     int viewId = viewInject.id();
     if (viewId > 0) {
         try {
-        
+
             Method findViewByIdMethod = targetClz.getMethod("findViewById", int.class);
             View view = (View) findViewByIdMethod.invoke(activity, viewId); // 反射调用，获取view对象
             field.setAccessible(true);
             field.set(activity, view); // 为ViewInject修饰的字段注入view
-        
+
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -69,7 +69,7 @@ ViewInject viewInject = field.getAnnotation(ViewInject.class);
 int viewId = viewInject.id();
 ```
 在通过上面这行代码获取到声明的 id。
-最后通过Java的反射机制调用 findViewById() 完成组件的初始化操作。 
+最后通过Java的反射机制调用 findViewById() 完成组件的初始化操作。
 
 
 #### 3) 进行注入
@@ -202,4 +202,3 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-
