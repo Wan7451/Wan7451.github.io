@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      注解（Annotation）--注解处理器
+title:      注解（Annotation）注解处理器
 subtitle:   注解系列
 date:       2017-03-23
 author:     wan7451
