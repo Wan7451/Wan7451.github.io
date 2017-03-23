@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      注解（Annotation）自定义注解入门
+title:      注解（Annotation）Android端的简单应用
 subtitle:   注解系列
 date:       2017-03-24
 author:     wan7451
